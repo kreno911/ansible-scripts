@@ -1,0 +1,17 @@
+---
+# Install myuptime2 script
+- name: Install myuptime2 in HOME/bin
+  copy:
+    src: "myuptime2"
+    dest: "{{ bin_dir }}"
+    mode: 0755
+
+# tasks file for cron
+- name: Install uptime cron
+  cron:
+    name: "Update time"
+    minute: "*/2"
+    backup: yes
+    job: "{{ bin_dir }}/myuptime 2>> {{ log_dir }}/uptime.log"
+    state: present
+

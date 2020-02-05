@@ -1,0 +1,12 @@
+---
+# tasks file for env
+- name: Debug statements
+  debug:
+    var: bin_dir, user, user_home, MYPORT, test_x
+- name: Install bashrc into root
+  copy:
+    src: "bashrc.txt"
+    dest: "{{ user_home }}/.bashrc"
+    group: "{{ user }}"
+    owner: "{{ user }}"
+    mode: 0644

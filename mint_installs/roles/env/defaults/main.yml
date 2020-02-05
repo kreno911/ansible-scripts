@@ -1,0 +1,4 @@
+---
+# defaults file for env
+bin_dir: /tmp/tmp
+test_x: 4444

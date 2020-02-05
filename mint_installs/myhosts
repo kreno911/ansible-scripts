@@ -1,0 +1,7 @@
+[myhosts]
+# Add local connection to make it work
+localhost ansible_connection=local
+
+[others]
+thishost ansible_host=127.0.0.1
+

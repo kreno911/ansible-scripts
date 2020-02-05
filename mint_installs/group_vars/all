@@ -1,0 +1,7 @@
+---
+# Global defaults
+user: mike
+bin_dir: /home/mike/bin
+log_dir: /home/mike/logs
+user_home: /home/mike
+MYPORT: 9999

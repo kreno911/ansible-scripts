@@ -1,0 +1,9 @@
+- name: Linux Mint install package
+  gather_facts: no
+  hosts: myhosts
+
+  roles:
+    - env 
+    #- crons 
+    #- browsers 
+    - python 
